@@ -1,12 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import './Header.js';
+import Header from './Header.js';
+import Main from './Main.js';
+import Nav from './Nav.js';
+import Footer from './Footer.js';
 
 function App() {
   return (
-    <div className="App">
-      <p>Homepage</p>
-      <p>Additional comment</p>
-    </div>
+    <>
+      <Header>
+        <Nav></Nav>
+      </Header>
+      <Main></Main>
+      <Footer></Footer>
+    </>
   );
 }
 
