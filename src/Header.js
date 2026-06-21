@@ -1,10 +1,14 @@
 import React from 'react';
-import logo from './Logo.svg';
-function Header(){
+import './Header.css';
+
+export default function Header( {children} ){
     return(
         <>
-            <img src={logo} alt="Logo"></img>
-            <header></header>
+            <header className="site-header">
+                <img className="site-logo" src="/Logo.svg" alt="Logo"></img>
+                {children}
+            </header>
         </>
     )
 }
+

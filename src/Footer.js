@@ -1,8 +1,9 @@
-function Footer(){
+export default function Footer(){
     return(
         <footer>
-            <Nav>
+            <nav>
                 <menu>
+                    <p>DoorMat Navigation</p>
                     <li>Home</li>
                     <li>About</li>
                     <li>Menu</li>
@@ -17,12 +18,12 @@ function Footer(){
                     <li>Email</li>
                 </menu>
                 <menu>
-                    <li>Social Media Links</li>
+                    <p>Social Media Links</p>
                     <li>Address</li>
                     <li>Phone Number</li>
                     <li>Email</li>
                 </menu>
-            </Nav>
+            </nav>
         </footer>
     )
 }
