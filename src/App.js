@@ -10,7 +10,7 @@ function App() {
       <Header>
         <Nav></Nav>
       </Header>
-      {/* <Main></Main> */}
+      <Main></Main>
       {/*<Footer></Footer>*/}
     </>
   );

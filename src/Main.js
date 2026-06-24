@@ -17,38 +17,43 @@ export default function Main() {
         <img
           className="hero-img"
           src="/restauranfood.jpg"
-          alt="Little Lemon restaurant food"
+          alt="Little Lemon restaurant Chef and Sushi"
         />
       </section>
 
+
+      {/* This is for specials section */}
       <section className="site-menu">
-        <h1>This week's specials</h1>
-        <button>Online Menu</button>
-
-        <img
-          src="/greek salad.jpg"
-          alt="Greek salad"
-          style={{ width: "150%" }}
-        />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button>Order a delivery</button>
-
-        <img
-          src="/bruchetta.svg"
-          alt="Bruschetta"
-          style={{ width: "150%" }}
-        />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button>Order a delivery</button>
-
-        <img
-          src="/lemon dessert.jpg"
-          alt="Lemon dessert"
-          style={{ width: "150%" }}
-        />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button>Order a delivery</button>
+        <div className="menu-header">
+          <h1>This week's specials</h1>
+          <button>Online Menu</button>
+        </div>
+        <article className="menu-card">
+          <img
+            src="/greek salad.jpg"
+            alt="Greek salad"
+          />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button>Order a delivery</button>
+        </article>
+        <article className="menu-card">
+          <img
+            src="/bruchetta.svg"
+            alt="Bruschetta"
+          />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button>Order a delivery</button>
+        </article>
+        <article className="menu-card">
+          <img
+            src="/lemon dessert.jpg"
+            alt="Lemon dessert"
+          />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button>Order a delivery</button>
+        </article>
       </section>
+
 
       <section className="site-testimonials">
         <h1>Testimonials</h1>

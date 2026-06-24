@@ -1,85 +1,81 @@
+
+/* There is only padding, no column on right */
 .site-header{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    padding-inline: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  border: 2px solid red;
+  padding-inline: 16px;
+  /* Gets too big on 4k screens */
+  padding-block: 3vw;
 }
 
 .site-logo {
-    display: none;
+  display: none;
 }
 
 .site-nav{
-    white-space: nowrap;
-    grid-column: 1 / -1;
-    justify-self: stretch;
+  white-space: nowrap;
+  grid-column: 1 / -1;
+  border: 2px solid red;
 }
 
 .site-nav menu {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 8px;
-    list-style: none;
-    border: 2px solid red;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+  list-style: none;
 }
 
 .site-nav li{
-    font-size: 14px;
+  font-size: 14px;
 }
 
+/* There is one column on right in 768 px  */
 @media (min-width: 768px){
-    .site-header{
-        grid-template-columns: repeat(8, 1fr);
-    }
-    .site-logo {
-        padding-left: 0%;
-        grid-column: 2 /4;
-    }
-    .site-nav {
-        white-space: nowrap;
-        grid-column: 4/6;
-    }
+  .site-header{
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .site-logo {
+    grid-column: 2 /4;
+    display: block;
+  }
+  .site-nav {
+    white-space: nowrap;
+    grid-column: 4/8;
+    border: 2px solid red;
+  }
 
-    .site-nav menu {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 6%;
-        margin: 0;
-        list-style: none;
-    }
-    .site-nav li {
-        font-size: 18px
-    }
+  .site-nav menu {
+    margin: 0;
+  }
+  .site-nav li {
+    font-size: 16px
+  }
 }
 
+/* There are two columns on the right for space and no padding */
 @media (min-width: 1280px){
-    .site-header{
-        grid-template-columns: repeat(12, 1fr);
-    }
-    .site-logo {
-        padding-left: 0%;
-        grid-column: 2 /4;
-    }
+  .site-header{
+    grid-template-columns: repeat(12, 1fr);
+    padding-inline: 0px;
+    padding-block: 2vw;
+  }
+  .site-logo {
+    grid-column: 2 /4;
+  }
 
-    .site-nav {
-        white-space: nowrap;
-        grid-column: 4/10;
-    }
-    .site-nav menu {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 8%;
-        margin: 0;
-        list-style: none;
-    }
-    .site-nav li {
-        font-size: 20px
-    }
+  .site-nav {
+    white-space: nowrap;
+    grid-column: 4/11;
+    border: 2px solid red;
+  }
+  .site-nav menu {
+    margin: 0;
+  }
+  .site-nav li {
+    font-size: 20px
+  }
 }
-
-
-
