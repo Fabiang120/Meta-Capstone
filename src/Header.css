@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  border: 2px solid red;
   padding-inline: 16px;
   /* Gets too big on 4k screens */
   padding-block: 3vw;
@@ -17,7 +16,6 @@
 .site-nav{
   white-space: nowrap;
   grid-column: 1 / -1;
-  border: 2px solid red;
 }
 
 .site-nav menu {
@@ -30,7 +28,7 @@
 }
 
 .site-nav li{
-  font-size: 14px;
+  font-size: 2vw;
 }
 
 /* There is one column on right in 768 px  */
@@ -45,14 +43,13 @@
   .site-nav {
     white-space: nowrap;
     grid-column: 4/8;
-    border: 2px solid red;
   }
 
   .site-nav menu {
     margin: 0;
   }
   .site-nav li {
-    font-size: 16px
+    font-size: 1.6vw;
   }
 }
 
@@ -60,7 +57,7 @@
 @media (min-width: 1280px){
   .site-header{
     grid-template-columns: repeat(12, 1fr);
-    padding-inline: 0px;
+    padding-inline: 16px;
     padding-block: 2vw;
   }
   .site-logo {
@@ -69,13 +66,12 @@
 
   .site-nav {
     white-space: nowrap;
-    grid-column: 4/11;
-    border: 2px solid red;
+    grid-column: 5/12;
   }
   .site-nav menu {
     margin: 0;
   }
   .site-nav li {
-    font-size: 20px
+    font-size: 1.4vw;
   }
 }

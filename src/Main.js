@@ -33,7 +33,8 @@ export default function Main() {
             src="/greek salad.jpg"
             alt="Greek salad"
           />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Greek Salad <span>$12.99</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <button>Order a delivery</button>
         </article>
         <article className="menu-card">
@@ -41,7 +42,8 @@ export default function Main() {
             src="/bruchetta.svg"
             alt="Bruschetta"
           />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Bruchetta <span>$5.99</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <button>Order a delivery</button>
         </article>
         <article className="menu-card">
@@ -49,7 +51,8 @@ export default function Main() {
             src="/lemon dessert.jpg"
             alt="Lemon dessert"
           />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Lemon Dessert <span>$5.00</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <button>Order a delivery</button>
         </article>
       </section>

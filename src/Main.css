@@ -2,27 +2,55 @@
 .site-hero {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 2px solid red;
   position: relative;
   padding-inline: 16px;
   /* margin: 0px 16px 0px; */
-  padding-block: 4vw;
+  padding-block: 10vw;
   background-color: #495E57;
 
 }
 
 .hero-text {
   grid-column: 1 / 3;
+
+  /* Turns text container into vertical stack for spacing between elements*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hero-text h1{
+  color: #F4CE14;
+  font-size: 6vw;
+}
+
+.hero-text h2{
+  font-size: 4.4vw;
+}
+
+.hero-text p{
+  font-size: 1.8vw;
+}
+
+.hero-text button{
+  background-color: #F4CE14;
+  color: black;
+  padding: 12px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8vw;
 }
 
 .hero-img {
   grid-column: 4 / 5;
-  width: 30vw;
+  width: 180%;
   aspect-ratio: 3.5/4;
   object-fit: cover;
   /* Brings Image down so its slightly overlapping with specials */
   position: absolute;
-  bottom: -8vw;
+  bottom: -12vw;
   right: 0;
 }
 
@@ -36,12 +64,30 @@
     grid-column: 2 / 4;
   }
 
+  .hero-text p{
+    color: white;
+    font-size: 1.4vw;
+  }
+
   .hero-img {
     grid-column: 6/ 8;
     /* Img too small make img width bigger */
-    width: 30vw;
+    width: 140%;
     /* Screen Expands too much and image does too far down */
     bottom: -6vw;
+    border-radius: 8px;
+  }
+  .hero-text button{
+  font-size: 1.4vw;
+  }
+
+  .hero-text h1{
+    color: #F4CE14;
+    font-size: 4vw;
+  }
+  .hero-text h2{
+    color: white;
+    font-size: 3.2vw;
   }
 }
 
@@ -55,9 +101,24 @@
   }
 
   .hero-img {
-    grid-column: 9 / 11;
+    grid-column: 9 / 12;
     /* Img too big so make img width smaller */
-    width: 26vw;
+    width: 110%;
+  }
+  .hero-text button{
+    font-size: 1.2vw;
+  }
+  .hero-text p{
+    color: white;
+    font-size: 1.2vw;
+  }
+  .hero-text h1{
+    color: #F4CE14;
+    font-size: 3.2vw;
+  }
+  .hero-text h2{
+    color: white;
+    font-size: 2.4vw;
   }
 }
 
@@ -66,8 +127,6 @@
 .site-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto;
-  border: 2px solid red;
   position: relative;
   padding-inline: 16px;
   /* margin: 0px 16px 0px; */
@@ -75,36 +134,164 @@
 }
 
 .menu-header{
-  grid-row: 1;
   grid-column: 1/-1;
-
   /* to make menu button and menu title side by side */
   display: flex;
   justify-content: space-between;
   align-items:center;
 }
 
+.menu-header h1{
+  font-size: 6vw;
+}
+
+.menu-header p{
+  font-size: 1.8vw;
+}
+
+.menu-header button{
+  background-color: #F4CE14;
+  color: black;
+  padding: 12px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8vw;
+}
+
 .menu-card{
-  border: 2px solid red;
   grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2F7;
+  gap: 20px;
+  margin-block: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .menu-card img{
-  width: 40vw;
   aspect-ratio: 1/1;
+  width: 40%;
   object-fit: cover;
+}
+
+.menu-card h3,
+.menu-card p,
+.menu-card button {
+  text-align: left;
+  width: 45%;
+  /* Forces text box to span full width so left-alignment is visible */
+  padding-inline: 16px;
+  background: none;
+  border: none;
+  /* Prevents text from hugging the card edges */
 }
 
 @media (min-width: 768px) {
   .site-menu{
     /* Screen gets too big thus reduce size expanding of specials section */
+    grid-template-columns: repeat(8, 1fr);
+    padding-inline: 16px;
     padding-block: 16vw;
+    /* gives cards space in between */
+    gap: 20px;
+  }
+  .menu-header{
+    grid-column: 2/8;
+    align-items: normal;
+  }
+
+  .menu-card{
+    grid-column: span 2;
+    align-items: start;
+    justify-content: start;
+    height: 100%;
+  }
+
+  .menu-card img{
+    width: 100%;
+  }
+  
+  .menu-card h3,
+  .menu-card p,
+  .menu-card button {
+    width: 100%;
+  }
+  .menu-header h1{
+    font-size: 4vw;
+  }
+  .menu-header p{
+    font-size: 1.4vw;
+  }
+  .menu-card h3{
+    display: flex;
+    min-height: 3rem;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+  }
+   /* Assign each card to its own dedicated column track */
+  .menu-card button{
+    margin-top: auto;
+    cursor: pointer;
+    font-size: 1.4vw;
+  }
+  .menu-card:nth-of-type(1){
+    grid-row: 2;
+    grid-column: 2 / span 3;
+  }
+
+  .menu-card:nth-of-type(2){
+    grid-row: 2;
+    grid-column: 5 / span 3;
+  }
+  .menu-card:nth-of-type(3){
+    grid-column: 2 /span 3;
   }
 }
 
 @media (min-width: 1280px) {
   .site-menu {
-      /* Screen gets too big thus reduce size expanding of specials section */
-      padding-block: 14vw;
-    }
+    /* Screen gets too big thus reduce size expanding of specials section */
+    grid-template-columns: repeat(12, 1fr);
+    padding-block: 14vw;
+  }
+
+  .menu-header{
+    grid-column: 2/12;
+    align-items: normal;
+  }
+
+  .menu-header button{
+    font-size: 1.2vw;
+  }
+
+  .menu-header h1{
+    font-size: 3.2vw;
+  }
+  .menu-header p{
+    font-size: 1.2vw;
+  }
+  .menu-card{
+    grid-row: 2; /* Force all cards onto row 2 */
+  }
+  .menu-card:nth-of-type(1){
+    grid-row: 2;
+    grid-column: 3 / span 2;
+  }
+
+  .menu-card:nth-of-type(2){
+    grid-row: 2;
+    grid-column: 6 / span 2;
+  }
+  .menu-card:nth-of-type(3){
+    grid-column: 9 /span 2;
+  }
+
+  .menu-card img{
+    width: 100%;
+  }
 }
